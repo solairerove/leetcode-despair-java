@@ -26,16 +26,15 @@ public class QuickSort {
 
     private int partition(List<Pair> pairs, int left, int right) {
         Pair pivot = pairs.get(right);
-        int i = left - 1;
+        int i = left;
         for (int j = left; j < right; j++) {
             if (pairs.get(j).getKey() <= pivot.getKey()) {
-                i++;
-                Collections.swap(pairs, i, j);
+                Collections.swap(pairs, i++, j);
             }
         }
 
-        Collections.swap(pairs, i + 1, right);
+        Collections.swap(pairs, i, right);
 
-        return i + 1;
+        return i;
     }
 }
