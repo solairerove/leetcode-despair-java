@@ -5,7 +5,9 @@ import com.github.solairerove.common.Pair;
 import java.util.Collections;
 import java.util.List;
 
+// O(nlog(n)) space / O(nlog(n)) time
 public class QuickSort {
+
     public List<Pair> quickSort(List<Pair> pairs) {
         if (pairs == null || pairs.isEmpty()) {
             return pairs;
