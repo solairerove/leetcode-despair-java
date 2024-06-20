@@ -34,15 +34,8 @@ public class MergeSort {
             }
         }
 
-        while (low < left.size()) {
-            merged.add(left.get(low));
-            low++;
-        }
-
-        while (high < right.size()) {
-            merged.add(right.get(high));
-            high++;
-        }
+        merged.addAll(left.subList(low, left.size()));
+        merged.addAll(right.subList(high, right.size()));
 
         return merged;
     }
