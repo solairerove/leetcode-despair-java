@@ -42,4 +42,26 @@ public class MergeSortTest {
         assertEquals(3, actual.get(1).getKey());
         assertEquals(3, actual.get(2).getKey());
     }
+
+    @Test
+    public void leetcodeMergeSortTest() {
+        var nums = new int[]{5, 2, 3, 1};
+        var actual = mergeSorter.mergeSort(nums);
+        var expected = new int[]{1, 2, 3, 5};
+
+        for (int i = 0; i < expected.length; i++) {
+            assertEquals(expected[i], actual[i]);
+        }
+    }
+
+    @Test
+    public void leetcodeMergeSortTest1() {
+        var nums = new int[]{5, 1, 1, 2, 0, 0};
+        var actual = mergeSorter.mergeSort(nums);
+        var expected = new int[]{0, 0, 1, 1, 2, 5};
+
+        for (int i = 0; i < expected.length; i++) {
+            assertEquals(expected[i], actual[i]);
+        }
+    }
 }
